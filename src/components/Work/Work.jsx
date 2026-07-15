@@ -63,7 +63,13 @@ const Work = () => {
             }}
           >
             <div className="project-video">
-              <video src={project.video} loop playsInline preload="metadata" />
+              <video
+                src={project.video}
+                autoPlay
+                loop
+                playsInline
+                preload="metadata"
+              />
 
               <div className="project-overlay">
                 <div className="project-play">
