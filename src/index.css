@@ -1592,6 +1592,12 @@ body {
   align-items: center;
   gap: 90px;
 }
+@media (max-width: 768px) {
+  .about-main {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+}
 
 /* =========================================
    ABOUT IMAGE
