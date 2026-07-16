@@ -1,16 +1,17 @@
 import { motion } from "framer-motion";
-import { Play } from "lucide-react";
+import { Play, X } from "lucide-react";
+import { useState } from "react";
 
 const projects = [
   {
     title: "Cinematic Storytelling",
     category: "YouTube Editing",
-    video: "/videos/project-3.mp4",
+    video: "/videos/project-1.mp4",
   },
   {
     title: "High Retention Edit",
     category: "Short Form Content",
-    video: "/videos/project-3.mp4",
+    video: "/videos/project-2.mp4",
   },
   {
     title: "Motion Design",
@@ -20,6 +21,7 @@ const projects = [
 ];
 
 const Work = () => {
+  const [selectedVideo, setSelectedVideo] = useState(null);
   return (
     <section id="work" className="work-section">
       <motion.div
@@ -46,29 +48,14 @@ const Work = () => {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, delay: index * 0.15 }}
             whileHover={{ y: -10 }}
-            onMouseEnter={(e) => {
-              const video = e.currentTarget.querySelector("video");
-
-              if (video) {
-                video.play();
-              }
-            }}
-            onMouseLeave={(e) => {
-              const video = e.currentTarget.querySelector("video");
-
-              if (video) {
-                video.pause();
-                video.currentTime = 0;
-              }
-            }}
           >
-            <div className="project-video">
-              <video
-                src={project.video}
-                autoPlay
-                loop
-                playsInline
-                preload="metadata"
+            <div
+              className="project-video"
+              onClick={() => setSelectedVideo(project.video)}
+            >
+              <img
+                src={`/thumbnails/project-${index + 1}.jpg`}
+                alt={project.title}
               />
 
               <div className="project-overlay">
@@ -85,6 +72,20 @@ const Work = () => {
           </motion.div>
         ))}
       </div>
+      {selectedVideo && (
+        <div className="video-modal" onClick={() => setSelectedVideo(null)}>
+          <div className="video-content" onClick={(e) => e.stopPropagation()}>
+            <button
+              className="close-btn"
+              onClick={() => setSelectedVideo(null)}
+            >
+              <X size={28} />
+            </button>
+
+            <video src={selectedVideo} controls autoPlay playsInline />
+          </div>
+        </div>
+      )}
     </section>
   );
 };

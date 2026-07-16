@@ -838,6 +838,43 @@ body {
     letter-spacing: -2px;
   }
 }
+.project-video img {
+  width: 100%;
+  display: block;
+  border-radius: 16px;
+}
+
+.video-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.video-content {
+  position: relative;
+  width: 90%;
+  max-width: 1000px;
+}
+
+.video-content video {
+  width: 100%;
+  max-height: 90vh;
+  border-radius: 12px;
+}
+
+.close-btn {
+  position: absolute;
+  right: -10px;
+  top: -40px;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
 
 /* =========================================
    SERVICES SECTION
