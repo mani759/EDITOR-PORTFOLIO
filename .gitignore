@@ -2,4 +2,6 @@ node_modules
 dist
 .vite
 .DS_Store
-# public/videos/*.mp4
+*.aep
+Adobe After Effects Auto-Save/
+public/videos/*.mp4
