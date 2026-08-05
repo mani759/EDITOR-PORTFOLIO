@@ -1,0 +1,14 @@
+[33mcommit e1b754ba092aa6aed074c79e02367c56c759dd5e[m
+Author: mani759 <manikantagurram5533@gmail.com>
+Date:   Thu Jul 16 18:48:25 2026 +0530
+
+    Add portfolio videos and thumbnails
+
+ public/thumbnails/project-1.jpg | Bin [31m0[m -> [32m573869[m bytes
+ public/thumbnails/project-2.jpg | Bin [31m0[m -> [32m161666[m bytes
+ public/videos/project-1.mp4     | Bin [31m0[m -> [32m26592744[m bytes
+ public/videos/project-2.mp4     | Bin [31m0[m -> [32m33804369[m bytes
+ public/videos/project-3.mp4     | Bin [31m69570772[m -> [32m0[m bytes
+ src/components/Work/Work.jsx    |  51 [32m++++++++++++++++++++[m[31m--------------------[m
+ src/index.css                   |  37 [32m+++++++++++++++++++++++++++++[m
+ 7 files changed, 63 insertions(+), 25 deletions(-)
