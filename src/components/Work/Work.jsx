@@ -6,17 +6,17 @@ const projects = [
   {
     title: "Cinematic Storytelling",
     category: "YouTube Editing",
-    video: "/videos/project-1.mp4",
+    video: "https://res.cloudinary.com/vtqjiruv/video/upload/v1795175991/project-1.mp4",
   },
   {
     title: "High Retention Edit",
     category: "Short Form Content",
-    video: "/videos/project-2.mp4",
+    video: "https://res.cloudinary.com/vtqjiruv/video/upload/v1795175936/project-2_1.mp4",
   },
   {
     title: "Motion Design",
     category: "Motion Graphics",
-    video: "/videos/project-3.mp4",
+    video: "https://res.cloudinary.com/vtqjiruv/video/upload/v1795175992/project-3.mp4",
   },
 ];
 
