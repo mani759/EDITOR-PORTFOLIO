@@ -100,7 +100,7 @@ const Contact = () => {
         {/* CONTACT BUTTON */}
 
         <motion.a
-          href="mailto:manikantagurram5533@gmail.com"
+          href="mailto:manikantagurram5533@gmail.com?subject=Video%20editing%20project%20inquiry&body=Hi%20Manikanta%2C%0A%0AI%27d%20like%20to%20discuss%20a%20video%20editing%20project."
           className="contact-main-button"
           initial={{
             opacity: 0,
@@ -189,7 +189,7 @@ const Contact = () => {
           {/* YOUTUBE */}
 
           <motion.a
-            href="https://www.youtube.com/@mani_frames0"
+            href="https://www.youtube.com/@edit_frames0"
             target="_blank"
             rel="noreferrer"
             aria-label="YouTube"

@@ -4,6 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const whatsappUrl = "https://wa.me/917386032284";
 
   const navLinks = [
     { name: "Work", href: "#work" },
@@ -42,7 +43,12 @@ const Navbar = () => {
 
         {/* HIRE BUTTON */}
 
-        <a href="#contact" className="navbar-hire-button">
+        <a
+          href={whatsappUrl}
+          className="navbar-hire-button"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           Hire Me
         </a>
 
@@ -51,6 +57,9 @@ const Navbar = () => {
         <button
           className="mobile-menu-button"
           onClick={() => setMenuOpen(!menuOpen)}
+          aria-expanded={menuOpen}
+          aria-controls="mobile-navigation"
+          aria-label={menuOpen ? "Close menu" : "Open menu"}
         >
           {menuOpen ? <X size={25} /> : <Menu size={25} />}
         </button>
@@ -62,18 +71,23 @@ const Navbar = () => {
         {menuOpen && (
           <motion.div
             className="mobile-navigation"
+            id="mobile-navigation"
             initial={{
               opacity: 0,
-              height: 0,
+              y: -12,
+              scale: 0.96,
             }}
             animate={{
               opacity: 1,
-              height: "auto",
+              y: 0,
+              scale: 1,
             }}
             exit={{
               opacity: 0,
-              height: 0,
+              y: -12,
+              scale: 0.96,
             }}
+            transition={{ duration: 0.2, ease: "easeOut" }}
           >
             {navLinks.map((link) => (
               <a
@@ -84,6 +98,15 @@ const Navbar = () => {
                 {link.name}
               </a>
             ))}
+            <a
+              className="mobile-navigation-hire"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={() => setMenuOpen(false)}
+            >
+              Message me on WhatsApp
+            </a>
           </motion.div>
         )}
       </AnimatePresence>

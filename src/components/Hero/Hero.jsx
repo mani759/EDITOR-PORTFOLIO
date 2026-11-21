@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
+  const whatsappUrl = "https://wa.me/917386032284";
+
   const textContainer = {
     hidden: {},
     visible: {
@@ -72,8 +74,10 @@ const Hero = () => {
             </motion.a>
 
             <motion.a
-              href="#contact"
+              href={whatsappUrl}
               className="secondary-button"
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{
                 y: -4,
               }}
