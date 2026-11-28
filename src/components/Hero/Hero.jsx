@@ -2,8 +2,7 @@ import { motion } from "framer-motion";
 import { ArrowDown } from "lucide-react";
 
 const Hero = () => {
-  const whatsappNumber = "+91 73860 32284";
-  const whatsappUrl = `https://wa.me/${whatsappNumber.replace(/\D/g, "")}`;
+  const whatsappUrl = "https://wa.me/917386032284";
 
   const textContainer = {
     hidden: {},
@@ -77,8 +76,6 @@ const Hero = () => {
             <motion.a
               href={whatsappUrl}
               className="secondary-button"
-              target="_blank"
-              rel="noopener noreferrer"
               whileHover={{
                 y: -4,
               }}
@@ -87,7 +84,6 @@ const Hero = () => {
               }}
             >
               Hire Me
-              <span className="mobile-whatsapp-number">{whatsappNumber}</span>
             </motion.a>
           </motion.div>
         </motion.div>
